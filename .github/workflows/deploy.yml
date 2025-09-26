@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'presentations/fe-monthly-25-09/external.md'
-      - 'presentations/fe-monthly-25-09/package.json'
-      - 'presentations/fe-monthly-25-09/pnpm-lock.yaml'
+      - 'external.md'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -22,9 +22,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: presentations/fe-monthly-25-09
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -56,17 +53,17 @@ jobs:
         run: pnpm install
 
       - name: Build external slides
-        run: pnpm exec slidev build external.md --base /fe-monthly-25-09/
+        run: pnpm exec slidev build external.md --base /${{ github.event.repository.name }}/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: presentations/fe-monthly-25-09/dist
+          path: dist
 
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}fe-monthly-25-09/
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     steps:

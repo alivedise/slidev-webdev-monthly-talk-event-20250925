@@ -149,8 +149,6 @@ mdc: true
 </div>
 
 ---
-
----
 layout: cover
 ---
 
@@ -1076,6 +1074,17 @@ const EnhancedButton = withLogger(Button);
 </div>
 
 ---
+
+# Why do I need to specify these stories?
+
+- 不久的將來很可能人類只剩下兩件事
+  - 1. (survey後)提供方案
+  - 2. 做出決策
+
+- 不論是前端/後端，甚至非工程師
+  - 大部分的執行角色都會移往 AI
+
+---
 layout: center
 ---
 
@@ -1114,6 +1123,12 @@ layout: center
 <div v-click>
 
 - API Client Pattern
+
+</div>
+
+<div v-click>
+
+- obsidian + agent
 
 </div>
 

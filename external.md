@@ -742,7 +742,7 @@ layout: cover
   <div class="quote-decoration quote-decoration-left">❝</div>
   <div class="quote-decoration quote-decoration-right">❞</div>
   <div class="quote-content">
-    <p class="quote-text">前端不需要什麼依賴注入，反轉依賴原則</p>
+    <p class="quote-text">前端不需要什麼依賴注入，控制反轉原則</p>
     <div class="quote-attribution">
       <span class="attribution-dash">—</span>
       <span class="attribution-author">某前端專家網紅</span>

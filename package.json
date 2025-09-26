@@ -1,0 +1,28 @@
+{
+  "name": "fe-monthly-25-09",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "dev:external": "slidev external.md --open --port 3030",
+    "export": "slidev export",
+    "export:external": "slidev export external.md"
+  },
+  "dependencies": {
+    "@ekino/slidev-theme-ekino": "^1.2.0",
+    "@slidev/cli": "^51.8.0",
+    "@slidev/theme-apple-basic": "^0.25.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-theme-academic": "^2.1.0",
+    "slidev-theme-minerva": "^0.0.3",
+    "slidev-theme-neversink": "^0.3.6",
+    "slidev-theme-penguin": "^2.3.1",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "^3.5.14"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.52.0"
+  }
+}
